@@ -1,0 +1,34 @@
+[air]
+git-tree-sha1 = "036a342cc3846a6c9f9a64a67579b781ce5a4580"
+
+    [[air.download]]
+    sha256 = "248aa7d74e1ffc552753bfe73a54551012b53d5b3b08e6d73b6348354314"
+    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/air/air.csv.gz"
+
+[co2]
+git-tree-sha1 = "0d57728854ed97398f71421dcc48c97c2eaba1d9"
+
+    [[co2.download]]
+    sha256 = "fa265d15c7bbf1ebada55fd8cf81cdfe3cc884784741efef865a8cd1762643"
+    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/co2/co2.csv.gz"
+
+[london]
+git-tree-sha1 = "3c6ff3abe8f290e1b921e07873b7266e26843d32"
+
+    [[london.download]]
+    sha256 = "abafd7bf4e5842ebae23632dc878e49a945d35792cf096e6a98da8487ec438f6"
+    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/london/london.csv.gz"
+
+[quakes]
+git-tree-sha1 = "d699bb7d6fcc4de894505234a4334cc8dbce5ff0"
+
+    [[quakes.download]]
+    sha256 = "db51cd31f95393c8ef479b6f84126a9e2c6941478939ef337cd24be2d31"
+    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/quakes/quakes.csv.gz"
+
+[seaborne]
+git-tree-sha1 = "c23808606d0d15dc1221133d773680831bda94c1"
+
+    [[seaborne.download]]
+    sha256 = "ab77b6b5a512664ef58c6ef9922f8be434c2dbd4264998275445edc63c38"
+    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/seaborne/seaborne.csv.gz"
