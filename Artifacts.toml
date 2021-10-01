@@ -1,34 +1,31 @@
-[air]
-git-tree-sha1 = "036a342cc3846a6c9f9a64a67579b781ce5a4580"
-
-    [[air.download]]
-    sha256 = "248aa7d74e1ffc552753bfe73a54551012b53d5b3b08e6d73b6348354314"
-    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/air/air.csv.gz"
-
 [co2]
-git-tree-sha1 = "0d57728854ed97398f71421dcc48c97c2eaba1d9"
+git-tree-sha1 = "72a1683fe4b6f00659861f0daa02b26ae0a7baf9"
+lazy = true
 
     [[co2.download]]
-    sha256 = "fa265d15c7bbf1ebada55fd8cf81cdfe3cc884784741efef865a8cd1762643"
-    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/co2/co2.csv.gz"
+    sha256 = "1cc4cd0f936403a7c379af3410c1c36ce7d3054282533aeddb816715a1e12f8d"
+    url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/co2.tar.gz"
 
 [london]
-git-tree-sha1 = "3c6ff3abe8f290e1b921e07873b7266e26843d32"
+git-tree-sha1 = "066d2b7ad0a3348fe052021c6d4bd496ca225153"
+lazy = true
 
     [[london.download]]
-    sha256 = "abafd7bf4e5842ebae23632dc878e49a945d35792cf096e6a98da8487ec438f6"
-    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/london/london.csv.gz"
+    sha256 = "0ebb4bf44830a049dcfe988de39e0bd1ddc6ea575e944bac4011125bbc06e499"
+    url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/london.tar.gz"
 
 [quakes]
-git-tree-sha1 = "d699bb7d6fcc4de894505234a4334cc8dbce5ff0"
+git-tree-sha1 = "aeacace080fab6f9f59ddcb1acf596b9036be5ba"
+lazy = true
 
     [[quakes.download]]
-    sha256 = "db51cd31f95393c8ef479b6f84126a9e2c6941478939ef337cd24be2d31"
-    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/quakes/quakes.csv.gz"
+    sha256 = "1f2480634db72a2a0d209a123bd4e46122510ed88d3d24eb2a461351f38cec1e"
+    url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/quakes.tar.gz"
 
 [seaborne]
-git-tree-sha1 = "c23808606d0d15dc1221133d773680831bda94c1"
+git-tree-sha1 = "c328583e0a8bb9d037061f43504cb86d219092d9"
+lazy = true
 
     [[seaborne.download]]
-    sha256 = "ab77b6b5a512664ef58c6ef9922f8be434c2dbd4264998275445edc63c38"
-    url = "https://github.com/viraltux/ForecastData.jl/blob/main/data/seaborne/seaborne.csv.gz"
+    sha256 = "c26e08b3d800795a56b040a7d10256831a829bbae830393dbb49ea15d3b85bc4"
+    url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/seaborne.tar.gz"
