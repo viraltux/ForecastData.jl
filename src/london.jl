@@ -74,7 +74,7 @@ julia> london()
 """
 function london()
 
-    path = fdata("london")
+    path = art_path("london")
     
     df = open(joinpath(path, "london.csv")) do file
         CSV.read(file,DataFrame,

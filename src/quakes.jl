@@ -20,7 +20,7 @@ julia> quakes()
 """
 function quakes()
 
-    path = fdata("quakes")
+    path = art_path("quakes")
     
     open(joinpath(path, "quakes.csv")) do file
         CSV.read(file,DataFrame,

@@ -33,7 +33,7 @@ julia> seaborne()
 """
 function seaborne(full::Bool = false)
 
-    path = fdata("seaborne")
+    path = art_path("seaborne")
         
     sb_df = open(joinpath(path, "seaborne.csv")) do file
         CSV.read(file,DataFrame,

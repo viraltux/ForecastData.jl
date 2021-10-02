@@ -6,7 +6,7 @@ art_dir(name)
 Retrieve the directory where artifact `name` name is located
 
 """
-function art_dir(name)
+function art_path(name)
 
     art_toml = joinpath(splitdir(@__DIR__)[1], "Artifacts.toml")
     art_hash = artifact_hash(name, art_toml)

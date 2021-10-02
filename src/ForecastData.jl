@@ -4,7 +4,7 @@ using Pkg.Artifacts
 using CSV, DataFrames, DataFramesMeta, Dates, Downloads, Inflate, Tar
 
 
-include("art_dir.jl")
+include("art_path.jl")
 
 # Datasets
 include("co2.jl")

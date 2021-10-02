@@ -29,7 +29,7 @@ julia> co2()
 """
 function co2(full::Bool = false)
 
-    path = fdata("co2")
+    path = art_path("co2")
     
     co2_df = open(joinpath(path, "co2.csv")) do file
         CSV.read(file,DataFrame)
