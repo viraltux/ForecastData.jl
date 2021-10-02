@@ -1,5 +1,5 @@
 [co2]
-git-tree-sha1 = "72a1683fe4b6f00659861f0daa02b26ae0a7baf9"
+git-tree-sha1 = "fb59eb8909d5d8beff8da36a660ab4b14c5d9a57"
 lazy = true
 
     [[co2.download]]
@@ -7,7 +7,7 @@ lazy = true
     url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/co2.tar.gz"
 
 [london]
-git-tree-sha1 = "066d2b7ad0a3348fe052021c6d4bd496ca225153"
+git-tree-sha1 = "5f8a599fedec681e6d0c28555d9e9a27bf6b4d04"
 lazy = true
 
     [[london.download]]
@@ -15,7 +15,7 @@ lazy = true
     url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/london.tar.gz"
 
 [quakes]
-git-tree-sha1 = "aeacace080fab6f9f59ddcb1acf596b9036be5ba"
+git-tree-sha1 = "4e4043fe849d58c0100ca95821adc767fc213790"
 lazy = true
 
     [[quakes.download]]
@@ -23,7 +23,7 @@ lazy = true
     url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/quakes.tar.gz"
 
 [seaborne]
-git-tree-sha1 = "c328583e0a8bb9d037061f43504cb86d219092d9"
+git-tree-sha1 = "90f4cf0596da2c2d62a790cb99622ebed3083907"
 lazy = true
 
     [[seaborne.download]]
