@@ -22,8 +22,12 @@ using DataFrames
     # quakes
     data = quakes()
     @test data isa DataFrame
-    @test size(data) == (71,2)
+    @test size(data) == (181,2)
 
+    data = quakes("full")
+    @test data isa DataFrame
+    @test size(data) == (11924,22)
+    
     #seaborne
     data = seaborne()
     @test data isa DataFrame

@@ -41,12 +41,19 @@ function quakes(query::String = "count")
 
     if query == "count"
         @info "Number of earthquakes per year"
-        years = DataFrame(reshape(Dates.year.(qk_df.time),:,1),:auto)
+        qk_df = DataFrame(reshape(Dates.year.(qk_df.time),:,1),:auto)
 
-        return @sqldf """select x1 as year, count(*) as total_quakes
-                         from years
-                         group by x1
-                         order by x1"""
+        db = SQLite.DB();
+        Q = q -> DBInterface.execute(db, q);
+
+        qk_df |> SQLite.load!(db, "qk_df", temp=false);
+
+        query_count = """select x1 as year, count(*) as total_quakes
+                                 from qk_df
+                                 group by x1
+                                 order by x1"""
+        
+        Q(query_count)  |> DataFrame
 
     end
 
