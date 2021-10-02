@@ -3,7 +3,11 @@ Package: Forecast
 
     quakes()
 
-Return the number of earthquakes per year on earth with a magnitude higher or equal to six from 1950 to 2020. The data has been collected from https://earthquake.usgs.gov/ and aggregated.
+Return dagta about earthquakes with a magnitude higher or equal to six from 1638-06-11 to 2021-10-02. The data has been collected from https://earthquake.usgs.gov/ 
+
+# Arguments
+- `full`: if `true` Returns the full original dataset DataFrame, otherwise 
+
 
 # Examples
 ```julia-repl
@@ -18,14 +22,32 @@ julia> quakes()
    [...]
 ```
 """
-function quakes()
+function quakes(query::String = "count")
+
+    @assert query in ["full","count"]
 
     path = art_path("quakes")
-    
-    open(joinpath(path, "quakes.csv")) do file
+
+    qk_df = open(joinpath(path, "quakes.csv")) do file
         CSV.read(file,DataFrame,
-                 dateformat = "yyyy",
-                 types = Dict(:year => Date))
+                 dateformat = "yyyy-mm-ddTHH:MM:SS.sssZ",
+                 types = Dict(:time => Date))
     end
-    
+
+    if query == "full"
+        @info "Full dataset from 1638-06-11 to 2021-10-02"
+        return qk_df
+    end
+
+    if query == "count"
+        @info "Number of earthquakes per year"
+        years = DataFrame(reshape(Dates.year.(qk_df.time),:,1),:auto)
+
+        return @sqldf """select x1 as year, count(*) as total_quakes
+                         from years
+                         group by x1
+                         order by x1"""
+
+    end
+
 end

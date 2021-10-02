@@ -15,11 +15,11 @@ lazy = true
     url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/london.tar.gz"
 
 [quakes]
-git-tree-sha1 = "4e4043fe849d58c0100ca95821adc767fc213790"
+git-tree-sha1 = "68ee5945fdaa49b9ff8b69ae1b79c5f00b34e904"
 lazy = true
 
     [[quakes.download]]
-    sha256 = "1f2480634db72a2a0d209a123bd4e46122510ed88d3d24eb2a461351f38cec1e"
+    sha256 = "b8dcf6d264f89c069eb51c08a3875f552db1080f1e6884b7b7314069c74dca9f"
     url = "https://github.com/viraltux/ForecastData.jl/raw/main/data/quakes.tar.gz"
 
 [seaborne]

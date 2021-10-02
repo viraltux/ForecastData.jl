@@ -1,7 +1,7 @@
 module ForecastData
 
 using Pkg.Artifacts
-using CSV, DataFrames, DataFramesMeta, Dates, Downloads, Inflate, Tar
+using CSV, DataFrames, DataFramesMeta, Dates, Downloads, Inflate, RCall, SQLdf, Tar
 
 
 include("art_path.jl")
