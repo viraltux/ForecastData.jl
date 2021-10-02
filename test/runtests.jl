@@ -1,6 +1,8 @@
 using ForecastData
 using Test
 
+using DataFrames
+
 @testset "ForecastData.jl" begin
 
     # co2
