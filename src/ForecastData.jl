@@ -28,7 +28,7 @@ List of available dataset functions:
 |---|---
 |**co2** | Atmospheric carbon dioxide
 |**london** | Weather and crime in Greater London
-|**quakes** | Number of earthquakes
+|**quakes** | Earthquakes around the world
 |**seaborne** | World seaborne trade
 """
 ForecastData
