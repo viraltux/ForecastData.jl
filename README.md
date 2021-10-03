@@ -4,7 +4,7 @@ This package stores small to medium size time series datasets (in the Megabytes)
 
 Since the number of datasets could be potentially large and relatively big in size they are not downloaded when the package is installed, but only when they are called to then be stored locally as a Julia artifact.
 
-The format chosen to return the time series is via a [DataFrame](https://dataframes.juliadata.org/stable/) with its first column using [Dates](https://docs.julialang.org/en/v1/stdlib/Dates/)
+The format chosen to return the time series is via a [DataFrame](https://dataframes.juliadata.org/stable/) with its first column using [Dates](https://docs.julialang.org/en/v1/stdlib/Dates/) when appropiate.
 
 In general time series available in ForecastData will be "unique" in one of these two ways:
 - They are a combination of publicly available datasets (e.g. `london` dataset) 
