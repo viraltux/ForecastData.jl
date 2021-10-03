@@ -39,7 +39,7 @@ co2_ts = co2("paper")
 ```
 
 # Contributions
-if you would like to contribute new datasets to the package please conside a Pull Request with the following actions:
+if you would like to contribute new datasets to the package please consider a Pull Request with the following actions:
 - Update Artifacts.toml with the new dataset
 - Create a src/[new_dataset].jl file
 - Create a test/[new_dataset].jl file
