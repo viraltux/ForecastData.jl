@@ -8,7 +8,7 @@ The format chosen to return the time series is via a [DataFrame](https://datafra
 
 In general time series available in ForecastData will be "unique" in one of these two ways:
 - They are a combination of publicly available datasets (e.g. `london` dataset) 
-- They are a publicly available datasets with some preparation to facilitate their use (e.g. `quakes` dataset)
+- They are publicly available datasets with some preparation to facilitate their use (e.g. `quakes` dataset)
 	
 Simple publicly available datasets will not be generally considered, for instance [R](https://cran.r-project.org) datasets like  `AirPassengers` will not be stored in ForecastData since they can be easily accessed via [RCall](https://github.com/JuliaInterop/RCall.jl).
 
