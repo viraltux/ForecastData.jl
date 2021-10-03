@@ -15,7 +15,7 @@ SQLite = "0aa819cd-b072-5ff4-a722-6bc24af294d9"
 Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 
 [compat]
-CSV = "0.8, 0.9"
+CSV = "0.8.5"
 DataFrames = "1.2.2"
 DataFramesMeta = "0.9.1"
 Inflate = "0.1.2"
