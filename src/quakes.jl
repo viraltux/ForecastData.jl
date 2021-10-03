@@ -1,13 +1,17 @@
 """
 Package: Forecast
 
-    quakes()
+    quakes(query = "count")
 
-Return dagta about earthquakes with a magnitude higher or equal to six from 1638-06-11 to 2021-10-02. The data has been collected from https://earthquake.usgs.gov/ 
+Return data about earthquakes with a magnitude higher or equal to six from 1638-06-11 to 2021-10-02. The data has been collected from https://earthquake.usgs.gov/ 
 
 # Arguments
-- `full`: if `true` Returns the full original dataset DataFrame, otherwise 
+- `query`: Defaults to "count" and accepts the following values:
+    - "full" : Full original dataset
+    - "count" : Number of earthquakes by year
 
+# Returns
+Dataframe containing information based on the parameter `query`
 
 # Examples
 ```julia-repl

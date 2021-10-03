@@ -1,17 +1,19 @@
 """
 Package: Forecast
 
-    co2(full = false)
+    co2(query = "paper")
 
 Return dataset with atmospheric Carbon Dioxide Dry Air Mole Fractions from quasi-continuous measurements at Mauna Loa, Hawaii.
 
 K.W. Thoning, A.M. Crotwell, and J.W. Mund (2020), Atmospheric Carbon Dioxide Dry Air Mole Fractions from continuous measurements at Mauna Loa, Hawaii, Barrow, Alaska, American Samoa and South Pole. 1973-2019, Version 2020-08 National Oceanic and Atmospheric Administration (NOAA), Global Monitoring Laboratory (GML), Boulder, Colorado, USA https://doi.org/10.15138/yaf1-bk21 FTP path: ftp://aftp.cmdl.noaa.gov/data/greenhouse_gases/co2/in-situ/surface/
 
 # Arguments
-- `full`: if `true` Returns the full original dataset from 1973 to 2020 in a DataFrame, otherwise returns the subset used in "STL: A Seasonal-Trend Decomposition Procedure Based on Loess" from Cleveland et. al. Its default value is `false`.
+- `query`: Defaults to "paper" and accepts the following values:
+    - "full": Full original dataset from 1973 to 2020
+    - "paper": Subset used in "STL: A Seasonal-Trend Decomposition Procedure Based on Loess" from Cleveland et. al.
 
 # Returns
-Dataframe containing the descrived dataset.
+Dataframe containing information based on the parameter `query`
 
 # Examples
 ```julia-repl

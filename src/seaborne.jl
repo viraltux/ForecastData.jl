@@ -1,11 +1,11 @@
 """
 Package: Forecast
 
-    seaborne(full = false)
+    seaborne(query = "imports")
 
 Return estimates of world seaborne trade from AIS data collected by Marine Traffic.
 
-By default a DataFrame containing deadweight imports for France, Germany and the United Kingdom from 2015-04-01 to 2021-05-02 is returned, otherwise a DataFrame is returned for the same countries with import and exports for the below fields:
+The data contains deadweight imports and exprts for France, Germany and the United Kingdom from 2015-04-01 to 2021-05-02. The fields are:
 
 num_pc:     number of port calls
 mtc:        metric tons of cargo
@@ -14,8 +14,15 @@ suffix_ma:  30-day moving averages
 
 Data available at UN COMTRADE Monitor.Cerdeiro, Komaromi, Liu and Saeed (2020). 
 
+# Arguments
+- `query`: Defaults to "paper" and accepts the following values:
+    - "full": Full original dataset from from 2015-04-01 to 2021-05-02
+    - "imports": Subset with imports.
+
+
 # Returns
- Dataframe containing the seaborne dataset.
+Dataframe containing information based on the parameter `query`
+
 
 # Examples
 ```julia-repl
