@@ -31,7 +31,9 @@ julia> seaborne()
    [...]
 ```
 """
-function seaborne(full::Bool = false)
+function seaborne(query::String = "imports")
+
+    @assert query in ["full","imports"]
 
     path = art_path("seaborne")
         
@@ -41,15 +43,18 @@ function seaborne(full::Bool = false)
                  types = Dict(:year => Date))
     end
 
-    if full
+    if query == "full"
         @info "Full dataset with estimates of world seaborne trade from AIS"
         return sb_df
-    else
-        @info "Seaborne deadweight trade imports from AIS"
     end
+    
+    if query == "imports"
+        @info "Seaborne deadweight trade imports from AIS"
 
-    # Group by Country and Flow to select Imports
-    gbt = groupby(sb_df, [:country_name, :flow], sort=true)
-    DataFrame(Dict(:Date => gbt[1].date ,
-                   :UK => gbt[1].dwt, :Germany => gbt[3].dwt, :France => gbt[5].dwt))
+        # Group by Country and Flow to select Imports
+        gbt = groupby(sb_df, [:country_name, :flow], sort=true)
+        return DataFrame(Dict(:Date => gbt[1].date ,
+                              :UK => gbt[1].dwt, :Germany => gbt[3].dwt, :France => gbt[5].dwt))
+
+    end
 end

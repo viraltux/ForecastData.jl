@@ -53,7 +53,7 @@ function quakes(query::String = "count")
                                  group by x1
                                  order by x1"""
         
-        Q(query_count)  |> DataFrame
+        return Q(query_count)  |> DataFrame
 
     end
 

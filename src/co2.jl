@@ -27,7 +27,9 @@ julia> co2()
    [...]
 ```
 """
-function co2(full::Bool = false)
+function co2(query::String = "paper")
+
+    @assert query in ["full","paper"]
 
     path = art_path("co2")
     
@@ -35,29 +37,33 @@ function co2(full::Bool = false)
         CSV.read(file,DataFrame)
     end
 
-    if full
+    if query == "full"
         @info "Full dataset from 1973 to 2020"
         return co2_df
-    else
+    end
+
+    if query == "paper"
         @info "Dataset used in Cleveland et al. paper"
+
+
+        # recode missing values
+        co2_df.value = replace(co2_df.value, -999.99 => missing)
+
+        dates_co2 = Dates.Date(1973,1,1):Dates.Day(1):Dates.Date(2019,12,31)
+        co2_sdf = DataFrame([dates_co2, co2_df.value],[:date,:co2])
+
+        # paper dates
+        # using 17 may instead 17 april (as the paper claims)
+        # since there seems to be no data for april in 1974
+        dates_co2_stl = Dates.Date(1974,5,17):Dates.Day(1):Dates.Date(1986,12,31)
+
+        # revome leap year day
+        dates_co2_stl = filter(dates_co2_stl) do x
+            (Dates.isleapyear(x) & (Dates.month(x) == 2)) ? Dates.day(x) != 29 : true
+        end
+
+        return @subset(co2_sdf, in.(:date,  Ref(dates_co2_stl)))
+
     end
-
-    # recode missing values
-    co2_df.value = replace(co2_df.value, -999.99 => missing)
-
-    dates_co2 = Dates.Date(1973,1,1):Dates.Day(1):Dates.Date(2019,12,31)
-    co2_sdf = DataFrame([dates_co2, co2_df.value],[:date,:co2])
-
-    # paper dates
-    # using 17 may instead 17 april (as the paper claims)
-    # since there seems to be no data for april in 1974
-    dates_co2_stl = Dates.Date(1974,5,17):Dates.Day(1):Dates.Date(1986,12,31)
-
-    # revome leap year day
-    dates_co2_stl = filter(dates_co2_stl) do x
-        (Dates.isleapyear(x) & (Dates.month(x) == 2)) ? Dates.day(x) != 29 : true
-    end
-
-    @subset(co2_sdf, in.(:date,  Ref(dates_co2_stl)))
     
 end

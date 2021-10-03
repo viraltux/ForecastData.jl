@@ -10,7 +10,7 @@ using DataFrames
     @test data isa DataFrame
     @test size(data) == (4609,2)
 
-    data = co2(true)
+    data = co2("full")
     @test data isa DataFrame
     @test size(data) == (17166,17)
 
@@ -33,7 +33,7 @@ using DataFrames
     @test data isa DataFrame
     @test size(data) == (2199,4)
 
-    data = seaborne(true)
+    data = seaborne("full")
     @test data isa DataFrame
     @test size(data) == (13209,10)
     
