@@ -43,7 +43,7 @@ if you would like to contribute new datasets to the package please consider a Pu
 - Update Artifacts.toml with the new dataset
 - Create a src/[new_dataset].jl file
 - Create a test/[new_dataset].jl file
-- Update the README.md file with the new dataset
+- Update the README.md and Forecast.jl files with the new dataset information
 
 
 [![Build Status](https://github.com/viraltux/ForecastData.jl/workflows/CI/badge.svg)](https://github.com/viraltux/ForecastData.jl/actions)
