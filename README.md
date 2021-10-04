@@ -1,6 +1,6 @@
 # ForecastData
 
-This package stores small to medium size time series datasets (in the Megabytes) to be used in Julia.
+This package handles access to small to medium size time series datasets (in the Megabytes) to be used in Julia.
 
 Since the number of datasets could be potentially large and relatively big in size they are not downloaded when the package is installed, but only when they are called to then be stored locally as a Julia artifact.
 
@@ -46,5 +46,6 @@ if you would like to contribute new datasets to the package please consider a Pu
 - Update the README.md and Forecast.jl files with the new dataset information
 
 
+---
 [![Build Status](https://github.com/viraltux/ForecastData.jl/workflows/CI/badge.svg)](https://github.com/viraltux/ForecastData.jl/actions)
 [![Coverage](https://codecov.io/gh/viraltux/ForecastData.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/viraltux/ForecastData.jl)
