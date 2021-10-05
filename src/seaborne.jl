@@ -47,7 +47,7 @@ function seaborne(query::String = "imports")
     sb_df = open(joinpath(path, "seaborne.csv")) do file
         CSV.read(file,DataFrame,
                  dateformat = "mm/dd/yyyy HH:MM:SS pp",
-                 types = Dict(:year => Date))
+                 types = Dict(:date => Date))
     end
 
     if query == "full"
