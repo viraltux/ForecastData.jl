@@ -17,7 +17,7 @@ The current available datasets are:
 | Name | Description |  
 |---|---
 |**co2** | Atmospheric Carbon Dioxide Dry Air Mole Fractions from quasi-continuous measurements at Mauna Loa, Hawaii
-|**london** | Monthly data about weather and crime in Greater London from 2008 to 2018
+|**london** | Monthly data on weather and crime in Greater London from 2008 to 2018
 |**quakes** | Earthquakes with a magnitude higher or equal to six from 1638-06-11 to 2021-10-02
 |**seaborne** | Seaborne trade for France, Germany and the United Kingdom from 2015-04-01 to 2021-05-02
 
