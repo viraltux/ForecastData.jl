@@ -40,11 +40,12 @@ co2_ts = co2("paper")
 
 # Contributions
 if you would like to contribute new datasets to the package please consider a Pull Request with the following actions:
-- Update Artifacts.toml with the new dataset
+
+- Create a data/[new_dataset].tar.gz file with a [new_dataset].md description file.
 - Create a src/[new_dataset].jl file
 - Create a test/[new_dataset].jl file
 - Update the README.md and Forecast.jl files with the new dataset information
-
+- Update Artifacts.toml with the new dataset
 
 ---
 [![Build Status](https://github.com/viraltux/ForecastData.jl/workflows/CI/badge.svg)](https://github.com/viraltux/ForecastData.jl/actions)
