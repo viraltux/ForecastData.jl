@@ -1,7 +1,7 @@
 name = "ForecastData"
 uuid = "97bfbf95-b26f-4f60-9525-b5a468fedbf5"
 authors = ["Fran Urbano <viraltux@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
